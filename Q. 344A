@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+
+    int ans = 1;
+    string previous;
+    cin>>previous;
+    
+    for(int i=1;i<n;i++) {
+
+        string position;
+        cin>>position;
+
+        if(position != previous) {
+            ans++;
+        }
+        
+        previous = position;
+    }
+
+    cout<<ans<<endl;
+    return 0;
+}
