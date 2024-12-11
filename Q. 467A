@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() 
+{
+    int n;
+    cin>>n;
+
+    int ans = 0;
+
+    for(int i=0;i<n;i++) {
+
+        int people,space;
+        cin>>people>>space;
+
+        if(people + 2 <= space) {
+            ans++;
+        }
+    }
+    cout<<ans<<endl;
+    return 0;
+}
