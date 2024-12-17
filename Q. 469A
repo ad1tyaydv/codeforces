@@ -1,0 +1,35 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main() {
+    int n; // Total number of levels
+    cin >> n;
+
+    set<int> passed_levels; 
+
+    int p; 
+    cin >> p; 
+    for (int i = 0; i < p; i++) {
+        int level;
+        cin >> level;
+        passed_levels.insert(level); // Add levels Little X can pass
+    }
+
+    int q; 
+    cin >> q; 
+    for (int i = 0; i < q; i++) {
+        int level;
+        cin >> level;
+        passed_levels.insert(level); // Add levels Little Y can pass
+    }
+
+    // Check if they can pass all levels
+    if (passed_levels.size() == n) {
+        cout << "I become the guy." << endl;
+    } else {
+        cout << "Oh, my keyboard!" << endl;
+    }
+
+    return 0;
+}
