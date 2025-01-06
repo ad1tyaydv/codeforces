@@ -1,0 +1,31 @@
+#include <iostream>
+#include <type_traits>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+
+    int tt;
+    cin>>tt;
+    while(tt--) {
+
+        int n;
+        cin>>n;
+
+        if(n < 2) {
+            cout<<0<<endl;
+        }
+        else {
+            cout<<(n - 1) / 2 <<endl;
+        }
+    }
+}
