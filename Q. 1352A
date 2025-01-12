@@ -1,0 +1,53 @@
+#include <iostream>
+#include <type_traits>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+
+    int tt;
+    cin>>tt;
+    while(tt--) {
+
+        int num;
+        cin>>num;
+
+        if(num < 10) {
+            cout<<1<<endl;
+            cout<<num<<endl;
+            continue;
+        }
+
+        string s = to_string(num);
+        int n = static_cast<int>(s.size());
+        vector<int> ans;
+
+        for(int i=0;i<n;i++) {
+            if(s[i] != '0') {
+                string push(1, s[i]);
+
+                int size = n - i - 1;
+                while(size--) {
+                    push += '0';
+                }
+            
+            ans.push_back(stoi(push));
+            }
+        }
+
+        cout<<ans.size()<<endl;
+        for(int number : ans) {
+        cout<<number<<" ";
+        }
+        cout<<endl;
+    }
+}
