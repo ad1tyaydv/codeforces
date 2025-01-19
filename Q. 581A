@@ -1,0 +1,29 @@
+    #include <cctype>
+    #include <iostream>
+    #include <type_traits>
+    #include <vector>
+    #include <string>
+    #include <algorithm>
+    #include <stack>
+    #include <queue>
+    #include <deque>
+    #include <bits/stdc++.h>
+     
+    using namespace std;
+     
+    typedef long long ll;
+     
+    int main() {
+     
+        int a,b;
+        cin>>a>>b;
+     
+        int mini = min(a,b);
+        int maxi = max(a,b);
+     
+        cout<<mini<<" ";
+     
+        int left = maxi - mini;
+        cout<<(left / 2)<<endl;
+        
+    }
