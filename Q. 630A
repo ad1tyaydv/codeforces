@@ -1,0 +1,40 @@
+#include <cctype>
+#include <iostream>
+#include <type_traits>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+   ll mod(ll n) {
+    ll result = 1;
+    ll base = 5;
+
+    while(n > 0) {
+        if(n % 2 == 1) {
+            result = (base * result) % 100;
+        }
+        base = (base * base) % 100;
+        n /= 2;
+    }
+
+    return result;
+   }
+
+int main() {
+
+    ll n;
+    cin>>n;
+
+    ll ans = mod(n);
+
+    cout<<ans<<endl;
+    return 0;
+}
