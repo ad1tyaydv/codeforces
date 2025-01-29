@@ -1,0 +1,38 @@
+#include <cctype>
+#include <iostream>
+#include <type_traits>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+
+    int tt;
+    cin>>tt;
+    while(tt--) {
+    int a,b;
+    cin>>a>>b;
+
+    int sub = abs(b - a);
+
+    int rem = sub % 10;
+    int first = sub / 10;
+    int ans = 0;
+
+    if(rem != 0) {
+        ans = first + 1;
+    }
+    else {
+        ans = first; 
+    }
+    cout<<ans<<endl;
+    }
+}
