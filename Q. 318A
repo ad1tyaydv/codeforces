@@ -1,0 +1,30 @@
+#include <cctype>
+#include <iostream>
+#include <type_traits>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <stack>
+#include <queue>
+#include <deque>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main() {
+
+    long long n,k;
+    cin>>n>>k;
+
+    long long count_odd = (n + 1) / 2;
+    long long count_even = k - count_odd;
+
+    if(k <= count_odd) {
+        cout<<2 * k - 1;
+    }
+    else {
+        cout<<2 * count_even;
+    }
+}
